@@ -1,22 +1,234 @@
 <!DOCTYPE html>
-<html>
-<head><title>NEBULA 27</title><meta charset="UTF-8">
-<style>
-body { background: #0a0a2a; color: white; font-family: Arial; text-align: center; padding: 50px; }
-a { color: #c084fc; text-decoration: none; display: block; margin: 20px; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 30px; }
-a:hover { background: rgba(255,255,255,0.2); }
-</style>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEBULA 27 | Música del espacio exterior</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: radial-gradient(ellipse at 20% 30%, #0a0f2a, #020218);
+            font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+            background: rgba(10, 15, 35, 0.65);
+            backdrop-filter: blur(12px);
+            border-radius: 60px;
+            padding: 40px 30px;
+            border: 1px solid rgba(160, 120, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 15px rgba(160, 120, 255, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.01);
+        }
+
+        .avatar {
+            width: 130px;
+            height: 130px;
+            background: linear-gradient(135deg, #7c3aed, #b85eff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 65px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            transition: 0.3s;
+        }
+
+        .avatar:hover {
+            transform: rotate(5deg) scale(1.05);
+        }
+
+        h1 {
+            font-size: 42px;
+            background: linear-gradient(135deg, #ffffff, #c084fc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            color: #c9a9ff;
+            font-size: 18px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #a974ff;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+
+        .music-player {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 40px;
+            padding: 15px;
+            margin: 25px 0;
+            border: 1px solid #7c3aed;
+        }
+
+        .music-player audio {
+            width: 100%;
+            border-radius: 30px;
+            outline: none;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 30px 0;
+        }
+
+        .link-card {
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 80px;
+            padding: 14px 24px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            transition: all 0.25s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .link-card:hover {
+            background: rgba(184, 94, 255, 0.2);
+            transform: translateX(8px);
+            border-color: #b85eff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .link-icon {
+            font-size: 28px;
+            width: 45px;
+            text-align: center;
+        }
+
+        .link-name {
+            flex: 1;
+            text-align: left;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .link-arrow {
+            font-size: 22px;
+            opacity: 0.7;
+        }
+
+        .button-download {
+            display: inline-block;
+            background: linear-gradient(90deg, #7c3aed, #b85eff);
+            padding: 12px 28px;
+            border-radius: 40px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button-download:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 12px #b85eff;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #aaa;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        .visitor-counter {
+            font-size: 14px;
+            background: rgba(0,0,0,0.4);
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 50px;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 550px) {
+            .container { padding: 30px 18px; }
+            h1 { font-size: 32px; }
+            .link-card { padding: 10px 18px; }
+            .link-icon { font-size: 22px; width: 35px; }
+        }
+    </style>
 </head>
 <body>
-<h1>🌌 NEBULA 27</h1>
-<p>🎵 Música del espacio exterior</p>
-<div>
-<a href="https://instagram.com/nebula27">📸 Instagram</a>
-<a href="https://twitter.com/nebula27">🐦 Twitter</a>
-<a href="https://facebook.com/nebula27">📘 Facebook</a>
-<a href="https://youtube.com/@nebula27">▶️ YouTube</a>
-<a href="https://tiktok.com/@nebula27">🎵 TikTok</a>
+<div class="container">
+    <div class="avatar">🌌</div>
+    <h1>NEBULA 27</h1>
+    <div class="tagline">🎵 Música del espacio exterior 🚀</div>
+
+    <!-- Contador de visitas gratuito (usando flagcounter.com, sin necesidad de cuenta) -->
+    <div class="visitor-counter">
+        🌠 Visitantes: <img src="https://counter.flagcounter.com/count2/FPyM/bg=0A0F2A/txt=FFFFFF/border=7C3AED/px=badge" alt="contador" border="0" style="vertical-align: middle;">
+    </div>
+
+    <!-- Reproductor de música (pon aquí tu canción, por ahora es un ejemplo) -->
+    <div class="music-player">
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio HTML5.
+        </audio>
+        <p style="font-size: 12px; margin-top: 8px;">🎧 Preview - Próximo single "Nebular Drift"</p>
+    </div>
+
+    <div class="links">
+        <a href="https://instagram.com/nebula27" class="link-card" target="_blank">
+            <span class="link-icon">📸</span><span class="link-name">Instagram</span><span class="link-arrow">➡️</span>
+        </a>
+        <a href="https://twitter.com/nebula27" class="link-card" target="_blank">
+            <span class="link-icon">🐦</span><span class="link-name">X (Twitter)</span><span class="link-arrow">➡️</span>
+        </a>
+        <a href="https://facebook.com/nebula27" class="link-card" target="_blank">
+            <span class="link-icon">📘</span><span class="link-name">Facebook</span><span class="link-arrow">➡️</span>
+        </a>
+        <a href="https://youtube.com/@nebula27" class="link-card" target="_blank">
+            <span class="link-icon">▶️</span><span class="link-name">YouTube</span><span class="link-arrow">➡️</span>
+        </a>
+        <a href="https://tiktok.com/@nebula27" class="link-card" target="_blank">
+            <span class="link-icon">🎵</span><span class="link-name">TikTok</span><span class="link-arrow">➡️</span>
+        </a>
+    </div>
+
+    <!-- Botón para descargar / escuchar en plataformas -->
+    <a href="https://soundcloud.com/nebula27" class="button-download" target="_blank">🎧 Escucha mi música</a>
+
+    <div class="footer">
+        🌌 Próximamente: nuevo álbum "Cosmic Echoes"<br>
+        📧 Contacto: nebula27@example.com
+    </div>
 </div>
-<p>🌌 Próximamente...</p>
 </body>
 </html>
