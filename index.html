@@ -2,8 +2,16 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>NEBULA 27 | Música del espacio exterior</title>
+    <meta name="description" content="Música electrónica, atmósferas espaciales y sonidos del cosmos. Escucha lo nuevo de NEBULA 27.">
+    <meta name="author" content="NEBULA 27">
+    <meta property="og:title" content="NEBULA 27">
+    <meta property="og:description" content="Música del espacio exterior">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://roka2225.github.io/nebula27/">
+    <meta property="og:image" content="https://roka2225.github.io/nebula27/preview.jpg"> <!-- Opcional: pon una imagen de vista previa -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌌</text></svg>">
     <style>
         * {
             margin: 0;
@@ -12,118 +20,111 @@
         }
 
         body {
-            background: radial-gradient(ellipse at 20% 30%, #0a0f2a, #020218);
-            font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+            background: radial-gradient(circle at 10% 20%, #0b0f1c, #03050a);
+            font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            animation: fadeIn 1.5s ease;
+            padding: 2rem 1rem;
+            color: #fff;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
+        /* Contenedor principal tipo tarjeta cósmica */
         .container {
-            max-width: 700px;
+            max-width: 680px;
             width: 100%;
-            background: rgba(10, 15, 35, 0.65);
-            backdrop-filter: blur(12px);
-            border-radius: 60px;
-            padding: 40px 30px;
-            border: 1px solid rgba(160, 120, 255, 0.5);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 15px rgba(160, 120, 255, 0.3);
+            background: rgba(15, 20, 35, 0.55);
+            backdrop-filter: blur(16px);
+            border-radius: 3rem;
+            padding: 2rem 1.8rem 2.5rem;
+            border: 1px solid rgba(120, 100, 220, 0.5);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5), 0 0 0 0.5px rgba(160, 120, 255, 0.2);
+            transition: transform 0.2s ease;
             text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .container:hover {
-            transform: scale(1.01);
         }
 
         .avatar {
             width: 130px;
             height: 130px;
-            background: linear-gradient(135deg, #7c3aed, #b85eff);
+            background: linear-gradient(135deg, #6b2de8, #b45eff);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 65px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-            transition: 0.3s;
-        }
-
-        .avatar:hover {
-            transform: rotate(5deg) scale(1.05);
+            margin: 0 auto 1.2rem;
+            font-size: 3.8rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 0 3px rgba(255, 255, 255, 0.1);
+            transition: 0.2s;
         }
 
         h1 {
-            font-size: 42px;
-            background: linear-gradient(135deg, #ffffff, #c084fc);
-            -webkit-background-clip: text;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff, #bfa2ff);
             background-clip: text;
+            -webkit-background-clip: text;
             color: transparent;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
         }
 
         .tagline {
-            color: #c9a9ff;
-            font-size: 18px;
-            margin-bottom: 20px;
-            border-bottom: 1px dashed #a974ff;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #c9adff;
+            border-bottom: 1px dashed #6f4bcb;
             display: inline-block;
             padding-bottom: 6px;
+            margin-bottom: 1.5rem;
         }
 
-        .music-player {
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 40px;
-            padding: 15px;
-            margin: 25px 0;
-            border: 1px solid #7c3aed;
+        /* Reproductor de audio minimalista */
+        .player {
+            background: rgba(0, 0, 0, 0.55);
+            border-radius: 60px;
+            padding: 0.8rem 1.2rem;
+            margin: 1.8rem 0 1.5rem;
+            border: 1px solid #3f2a8c;
         }
-
-        .music-player audio {
+        audio {
             width: 100%;
-            border-radius: 30px;
+            border-radius: 60px;
             outline: none;
         }
 
+        /* Grid de enlaces / redes sociales */
         .links {
             display: flex;
             flex-direction: column;
-            gap: 16px;
-            margin: 30px 0;
+            gap: 0.9rem;
+            margin: 2rem 0;
         }
 
         .link-card {
-            background: rgba(255, 255, 255, 0.07);
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(4px);
             border-radius: 80px;
-            padding: 14px 24px;
-            text-decoration: none;
-            color: white;
+            padding: 0.85rem 1.5rem;
             display: flex;
             align-items: center;
-            gap: 18px;
+            gap: 1rem;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
             transition: all 0.25s;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .link-card:hover {
-            background: rgba(184, 94, 255, 0.2);
+            background: rgba(110, 70, 220, 0.3);
             transform: translateX(8px);
-            border-color: #b85eff;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border-color: #b87aff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         .link-icon {
-            font-size: 28px;
+            font-size: 1.8rem;
             width: 45px;
             text-align: center;
         }
@@ -131,103 +132,130 @@
         .link-name {
             flex: 1;
             text-align: left;
-            font-weight: 500;
-            letter-spacing: 0.5px;
+            font-size: 1rem;
+            letter-spacing: 0.3px;
         }
 
         .link-arrow {
-            font-size: 22px;
+            font-size: 1.3rem;
             opacity: 0.7;
         }
 
-        .button-download {
+        .btn-primary {
             display: inline-block;
-            background: linear-gradient(90deg, #7c3aed, #b85eff);
-            padding: 12px 28px;
-            border-radius: 40px;
-            color: white;
-            text-decoration: none;
+            background: linear-gradient(95deg, #7a45e8, #b656ff);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
             font-weight: bold;
-            margin-top: 10px;
+            text-decoration: none;
+            color: white;
             transition: 0.2s;
+            margin-top: 0.5rem;
             border: none;
             cursor: pointer;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
         }
 
-        .button-download:hover {
+        .btn-primary:hover {
             transform: scale(1.02);
-            box-shadow: 0 0 12px #b85eff;
+            background: linear-gradient(95deg, #8b5cf3, #c46eff);
+            box-shadow: 0 0 12px #a86eff;
+        }
+
+        .counter {
+            font-size: 0.8rem;
+            background: rgba(0, 0, 0, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.3rem 1rem;
+            border-radius: 60px;
+            margin-top: 1rem;
+            backdrop-filter: blur(4px);
         }
 
         .footer {
-            margin-top: 30px;
-            font-size: 13px;
+            margin-top: 2rem;
+            font-size: 0.7rem;
             color: #aaa;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-        }
-
-        .visitor-counter {
-            font-size: 14px;
-            background: rgba(0,0,0,0.4);
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 50px;
-            margin-bottom: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.2rem;
         }
 
         @media (max-width: 550px) {
-            .container { padding: 30px 18px; }
-            h1 { font-size: 32px; }
-            .link-card { padding: 10px 18px; }
-            .link-icon { font-size: 22px; width: 35px; }
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .link-icon {
+                font-size: 1.5rem;
+                width: 36px;
+            }
+            .link-name {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <div class="avatar">🌌</div>
+    <div class="avatar">
+        🌌
+    </div>
     <h1>NEBULA 27</h1>
     <div class="tagline">🎵 Música del espacio exterior 🚀</div>
 
-    <!-- Contador de visitas gratuito (usando flagcounter.com, sin necesidad de cuenta) -->
-    <div class="visitor-counter">
-        🌠 Visitantes: <img src="https://counter.flagcounter.com/count2/FPyM/bg=0A0F2A/txt=FFFFFF/border=7C3AED/px=badge" alt="contador" border="0" style="vertical-align: middle;">
-    </div>
-
-    <!-- Reproductor de música (pon aquí tu canción, por ahora es un ejemplo) -->
-    <div class="music-player">
-        <audio controls>
+    <!-- Reproductor de audio (cambia la URL por un tema real cuando quieras) -->
+    <div class="player">
+        <audio controls preload="metadata">
             <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
             Tu navegador no soporta audio HTML5.
         </audio>
-        <p style="font-size: 12px; margin-top: 8px;">🎧 Preview - Próximo single "Nebular Drift"</p>
+        <div style="font-size: 12px; margin-top: 6px;">🎧 Escucha el preview</div>
     </div>
 
     <div class="links">
-        <a href="https://instagram.com/nebula27" class="link-card" target="_blank">
-            <span class="link-icon">📸</span><span class="link-name">Instagram</span><span class="link-arrow">➡️</span>
+        <a href="https://instagram.com/nebula27" class="link-card" target="_blank" rel="noopener noreferrer">
+            <span class="link-icon">📸</span>
+            <span class="link-name">Instagram</span>
+            <span class="link-arrow">➡️</span>
         </a>
-        <a href="https://twitter.com/nebula27" class="link-card" target="_blank">
-            <span class="link-icon">🐦</span><span class="link-name">X (Twitter)</span><span class="link-arrow">➡️</span>
+        <a href="https://twitter.com/nebula27" class="link-card" target="_blank" rel="noopener noreferrer">
+            <span class="link-icon">🐦</span>
+            <span class="link-name">X (Twitter)</span>
+            <span class="link-arrow">➡️</span>
         </a>
-        <a href="https://facebook.com/nebula27" class="link-card" target="_blank">
-            <span class="link-icon">📘</span><span class="link-name">Facebook</span><span class="link-arrow">➡️</span>
+        <a href="https://facebook.com/nebula27" class="link-card" target="_blank" rel="noopener noreferrer">
+            <span class="link-icon">📘</span>
+            <span class="link-name">Facebook</span>
+            <span class="link-arrow">➡️</span>
         </a>
-        <a href="https://youtube.com/@nebula27" class="link-card" target="_blank">
-            <span class="link-icon">▶️</span><span class="link-name">YouTube</span><span class="link-arrow">➡️</span>
+        <a href="https://youtube.com/@nebula27" class="link-card" target="_blank" rel="noopener noreferrer">
+            <span class="link-icon">▶️</span>
+            <span class="link-name">YouTube</span>
+            <span class="link-arrow">➡️</span>
         </a>
-        <a href="https://tiktok.com/@nebula27" class="link-card" target="_blank">
-            <span class="link-icon">🎵</span><span class="link-name">TikTok</span><span class="link-arrow">➡️</span>
+        <a href="https://tiktok.com/@nebula27" class="link-card" target="_blank" rel="noopener noreferrer">
+            <span class="link-icon">🎵</span>
+            <span class="link-name">TikTok</span>
+            <span class="link-arrow">➡️</span>
         </a>
     </div>
 
-    <!-- Botón para descargar / escuchar en plataformas -->
-    <a href="https://soundcloud.com/nebula27" class="button-download" target="_blank">🎧 Escucha mi música</a>
+    <a href="https://soundcloud.com/nebula27" class="btn-primary" target="_blank" rel="noopener noreferrer">
+        🎧 Escucha en SoundCloud
+    </a>
+
+    <!-- Contador de visitas simple (solo decorativo, usa un servicio externo opcional) -->
+    <div class="counter">
+        🌠 Visitantes: <img src="https://counter.flagcounter.com/count2/FPyM/bg=0A0F2A/txt=FFFFFF/border=7C3AED/px=badge" alt="contador de visitas" style="vertical-align: middle;">
+    </div>
 
     <div class="footer">
-        🌌 Próximamente: nuevo álbum "Cosmic Echoes"<br>
-        📧 Contacto: nebula27@example.com
+        🌌 Nuevo álbum "Cosmic Echoes" — disponible pronto<br>
+        📧 nebula27@example.com
     </div>
 </div>
 </body>
